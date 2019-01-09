@@ -11,7 +11,7 @@ namespace PlortMarket
         //Do not update this config version with every new release, instead only use it if you have changed setting names, setting defaults, etc,
         //to avoid annoying the user with having their settings reset all the time. You DO NOT need to use it for when new settings are added.
         //If you do not need a config version you can remove any code related to it.
-        private static readonly string configVersion = "1.13";
+        private static readonly string configVersion = "1.15";
 
         public float HealthUpgrade4;
         public float AncientWaterLifetime;
@@ -58,12 +58,13 @@ namespace PlortMarket
                     //You can read more about the UMFConfigParsers in the API section of this documentation.
                     //MyFirstIntSetting = cfg.Read("MyFirstIntSetting ", new UMFConfigInt(10, 0, 100, 1), "A description of what my int setting does.");
                     //MyFirstBoolSetting = cfg.Read("MyFirstBoolSetting ", new UMFConfigBool(true, false), "A description of what my bool setting does.");
-                    //HealthUpgrade4 = cfg.Read("HealthUpgrade4", new UMFConfigFloat(health4_default, health4_rangeStart, health4_rangeEnd, 10, health4_default), "The health level for the 4th Health Upgrade.");
-                    Int32 health4_default = 500;
-                    Int32 health4_vanilla = 350;
-                    Int32 health4_rangeStart = 350;
-                    Int32 health4_rangeEnd = 1000;
-                    HealthUpgrade4 = cfg.Read("HealthUpgrade4", new UMFConfigInt(health4_default, health4_rangeStart, health4_rangeEnd, health4_vanilla), "The health level for the 4th Health Upgrade.");
+                    
+                    float health4_default = 500f;
+                    float health4_vanilla = 350f;
+                    float health4_rangeStart = 350f;
+                    float health4_rangeEnd = 1000f;
+                    //HealthUpgrade4 = cfg.Read("HealthUpgrade4", new UMFConfigInt(health4_default, health4_rangeStart, health4_rangeEnd, health4_vanilla), "The health level for the 4th Health Upgrade.");
+                    HealthUpgrade4 = cfg.Read("HealthUpgrade4", new UMFConfigFloat(health4_default, health4_rangeStart, health4_rangeEnd, 1, health4_vanilla), "The health level for the 4th Health Upgrade.");
                     float ancientWater_default = 1.0f;
                     float ancientWater_rangeStart = 0.5f;
                     float ancientWater_rangeEnd = 10.0f;
