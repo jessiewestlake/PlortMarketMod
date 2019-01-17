@@ -4,8 +4,6 @@ using Harmony;
 using System.Reflection.Emit;
 using UModFramework.API;
 
-
-
 namespace PlortMarket.Patches
 {
     [HarmonyPatch(typeof(Ammo))]

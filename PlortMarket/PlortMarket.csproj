@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Patches\Patch_AirNetStrength.cs" />
     <Compile Include="Patches\Patch_AncientWaterLifetime.cs" />
     <Compile Include="Patches\Patch_HealthUpgrade.cs" />
     <Compile Include="PlortMarket.cs" />
